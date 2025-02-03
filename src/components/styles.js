@@ -1,7 +1,14 @@
-const mainColor = "#F0E6EF";
-const accentColor = "#8F3F7B";
-const secondaryColor = "#D0B1D7";
-const mainTextColor = "#333";
+// const mainColor = "#F0E6EF";
+// const accentColor = "#8F3F7B";
+// const secondaryColor = "#D0B1D7";
+// const mainTextColor = "#333";
+// const whiteColor = "#fff";
+
+const mainColor = "#F8F5FA";
+const accentColor = "#82628A";
+const secondaryColor = "#A984AA";
+const mainTextColor = "#2D2D2D";
+const secondaryTextColor = "#82628A";
 const whiteColor = "#fff";
 
 const styles = {
@@ -15,7 +22,7 @@ const styles = {
     boxSizing: "border-box",
     marginInline: "auto",
     display: "flex",
-    paddingInline: "160px",
+    paddingInline: "100px",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -28,30 +35,51 @@ const styles = {
     marginBottom: "30px",
     a: {
       fontFamily: "Segoe Print, cursive",
+      // fontSize: "40px",
       color: whiteColor,
       textDecoration: "none",
       transition: "color 0.3s ease-in-out",
       padding: "8px",
     },
+    h1: {
+      fontSize: "36px",
+    },
   },
   bookCard: {
     width: "300px",
-    height: "500px",
-    borderRadius: "12px",
+    height: "380px",
+    borderRadius: "8px",
     padding: "10px 15px",
     display: "flex",
     flexDirection: "column",
-    backgroundColor: secondaryColor,
-    boxShadow: "2px 2px 10px 2px rgba(0, 0, 0, 0.15)",
-    color: whiteColor,
-    textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
+    background:
+      "linear-gradient(180deg,rgb(255, 255, 255) 90%, rgba(255, 255, 255, 0) 100%)",
+    // boxShadow: "2px 2px 10px 2px rgba(0, 0, 0, 0.15)",
+    boxShadow: "4px 6px 10px rgba(104, 79, 110, 0.1)",
+    color: secondaryTextColor,
+    textShadow: "1px 1px 2px rgba(130, 98, 138, 0.1)",
+    fontSize: "20px",
+    cursor: "pointer",
+    transition: "box-shadow 0.3s ease-in-out",
+    // border: "1px, solid, " + accentColor,
     image: {
       height: "300px",
       borderRadius: "3px",
       margin: "0px auto 10px",
+      border: "1px, solid, " + secondaryColor,
+    },
+    cardText: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
     },
     text: {
       marginBlock: "5px",
+    },
+    price: {
+      marginBlock: "5px",
+      fontSize: "22px",
     },
     textDescription: {
       width: "100%",
@@ -59,6 +87,9 @@ const styles = {
       WebkitBoxOrient: "vertical",
       WebkitLineClamp: 8, // Количество строк
       overflow: "hidden",
+    },
+    biggerText: {
+      fontSize: "24px",
     },
   },
   bookList: {
@@ -89,7 +120,7 @@ const styles = {
     right: 0,
     marginInline: "auto",
     h: {
-      opacity: 0.7,
+      // opacity: 0.7,
       color: whiteColor,
       textDecoration: "none",
       transition: "color 0.3s ease-in-out",

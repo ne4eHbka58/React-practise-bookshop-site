@@ -11,7 +11,7 @@ const Footer = () => {
           style={styles.footer.h}
           className="link"
         >
-          Мой профиль
+          Мой GitHub
         </a>
       </h4>
       <h4 style={styles.footer.h}>Артём Попов © 2025 - {date.getFullYear()}</h4>

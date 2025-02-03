@@ -23,5 +23,24 @@ code {
 
 .link:hover {
   color: var(--main-text-color);
-  /* color: #ffe9e9; */
+  /* background: linear-gradient(#fff 90%, #F8F5FA 100%); */
+}
+
+.BookList .BookCard:hover {
+  all: revert;
+  box-shadow: 4px 6px 10px 5px rgba(104, 79, 110, 0.2) !important;
+}
+
+.header {
+  animation: open-site-header-anim 1s ease-in-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes open-site-header-anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

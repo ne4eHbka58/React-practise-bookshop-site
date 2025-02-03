@@ -12,6 +12,7 @@ const bookList = ({ books }) => {
           title={book.title}
           author={book.author}
           description={book.description}
+          price={book.price}
         />
       ))}
     </div>

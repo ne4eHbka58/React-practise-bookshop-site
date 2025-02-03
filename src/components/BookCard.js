@@ -7,7 +7,7 @@ const imageContext = require.context(
   /\.(png|jpg|jpeg|gif)$/
 );
 
-const BookCard = ({ image, title, author, description }) => {
+const BookCard = ({ image, title, author, description, price }) => {
   return (
     <div className="BookCard" style={styles.bookCard}>
       <img
@@ -15,10 +15,14 @@ const BookCard = ({ image, title, author, description }) => {
         alt="изображение книги"
         style={styles.bookCard.image}
       />
-      <h4 style={styles.bookCard.text}>
-        {title}, <i>{author}</i>
-      </h4>
-      <p
+      <div style={styles.bookCard.cardText}>
+        <h4 style={styles.bookCard.text}>
+          <span style={styles.bookCard.biggerText}>{title}</span> <br />
+          <i>{author}</i>
+        </h4>
+        <p style={styles.bookCard.price}>{price} р.</p>
+      </div>
+      {/* <p
         style={Object.assign(
           {},
           styles.bookCard.text,
@@ -26,7 +30,7 @@ const BookCard = ({ image, title, author, description }) => {
         )}
       >
         {description}
-      </p>
+      </p> */}
     </div>
   );
 };
