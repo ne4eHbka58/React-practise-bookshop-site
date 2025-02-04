@@ -36,6 +36,11 @@ code {
   animation-iteration-count: 1;
 }
 
+.show {
+  opacity: 1 !important; /* Показываем элементы */
+  transform: translateY(0) !important; /* Возвращаем в исходное положение */
+}
+
 @keyframes open-site-header-anim {
   from {
     opacity: 0;

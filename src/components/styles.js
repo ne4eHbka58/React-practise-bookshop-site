@@ -54,14 +54,16 @@ const styles = {
     flexDirection: "column",
     background:
       "linear-gradient(180deg,rgb(255, 255, 255) 90%, rgba(255, 255, 255, 0) 100%)",
-    // boxShadow: "2px 2px 10px 2px rgba(0, 0, 0, 0.15)",
     boxShadow: "4px 6px 10px rgba(104, 79, 110, 0.1)",
     color: secondaryTextColor,
     textShadow: "1px 1px 2px rgba(130, 98, 138, 0.1)",
     fontSize: "20px",
     cursor: "pointer",
     transition: "box-shadow 0.3s ease-in-out",
-    // border: "1px, solid, " + accentColor,
+    // анимация появления
+    opacity: 0, // Скрываем элементы изначально
+    transform: "translateY(-50px)", // Смещаем элементы вверх
+    transition: "opacity 0.5s ease-out, transform 0.5s ease-out", // Анимация
     image: {
       height: "300px",
       borderRadius: "3px",
