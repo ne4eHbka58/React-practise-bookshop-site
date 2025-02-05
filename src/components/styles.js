@@ -1,10 +1,4 @@
-// const mainColor = "#F0E6EF";
-// const accentColor = "#8F3F7B";
-// const secondaryColor = "#D0B1D7";
-// const mainTextColor = "#333";
-// const whiteColor = "#fff";
-
-const mainColor = "#F8F5FA";
+const mainColor = "#F8F5FA"; //
 const accentColor = "#82628A";
 const secondaryColor = "#A984AA";
 const mainTextColor = "#2D2D2D";
@@ -20,9 +14,9 @@ const styles = {
   },
   header: {
     boxSizing: "border-box",
-    marginInline: "auto",
+    marginInline: "auto", // Расположение по середине
     display: "flex",
-    paddingInline: "100px",
+    paddingInline: "100px", // Отступы от краёв
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
@@ -35,10 +29,9 @@ const styles = {
     marginBottom: "30px",
     a: {
       fontFamily: "Segoe Print, cursive",
-      // fontSize: "40px",
       color: whiteColor,
       textDecoration: "none",
-      transition: "color 0.3s ease-in-out",
+      transition: "text-shadow 0.3s ease-in-out", // Анимация при наведении
       padding: "8px",
     },
     h1: {
@@ -53,22 +46,22 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     background:
-      "linear-gradient(180deg,rgb(255, 255, 255) 90%, rgba(255, 255, 255, 0) 100%)",
+      "linear-gradient(180deg,rgb(255, 255, 255) 90%, rgba(255, 255, 255, 0) 100%)", // Лёгкий градиент на фон карточки
     boxShadow: "4px 6px 10px rgba(104, 79, 110, 0.1)",
     color: secondaryTextColor,
     textShadow: "1px 1px 2px rgba(130, 98, 138, 0.1)",
     fontSize: "20px",
-    cursor: "pointer",
+    cursor: "pointer", // Меняет курсор на указатель, чтобы потом можно было нажать на карточку
     transition: "box-shadow 0.3s ease-in-out",
     // анимация появления
-    opacity: 0, // Скрываем элементы изначально
-    transform: "translateY(-50px)", // Смещаем элементы вверх
+    opacity: 0, // Скрывает элементы изначально
+    transform: "translateY(-50px)", // Смещает элементы вверх
     transition: "opacity 0.5s ease-out, transform 0.5s ease-out", // Анимация
     image: {
       height: "300px",
-      borderRadius: "3px",
+      borderRadius: "3px", // Скругление углов у обложки книги
       margin: "0px auto 10px",
-      border: "1px, solid, " + secondaryColor,
+      border: "1px, solid, " + secondaryColor, // Обводка
     },
     cardText: {
       display: "flex",
@@ -86,7 +79,7 @@ const styles = {
     textDescription: {
       width: "100%",
       display: "-webkit-box", // Нужно для сокращения многострочного текста
-      WebkitBoxOrient: "vertical",
+      WebkitBoxOrient: "vertical", // Ориентация текста
       WebkitLineClamp: 8, // Количество строк
       overflow: "hidden",
     },
@@ -95,9 +88,9 @@ const styles = {
     },
   },
   bookList: {
-    marginInline: "auto",
+    marginInline: "auto", // Расположение по середине
     display: "grid",
-    gridTemplateColumns: "repeat(4, minmax(300px, 1fr))",
+    gridTemplateColumns: "repeat(4, minmax(300px, 1fr))", // Создаёт 4 колонки с размером от 300px до 1fr
     width: "1600px",
     justifyContent: "space-between",
     gridAutoRows: "min-content", // Создает ряды высотой с контент
@@ -116,16 +109,11 @@ const styles = {
     backgroundColor: secondaryColor,
     borderRadius: "30px 30px 0 0",
     marginTop: "30px",
-    // position: "absolute",
-    bottom: 0,
-    left: 0,
-    right: 0,
-    marginInline: "auto",
+    marginInline: "auto", // Расположение по середине
     h: {
-      // opacity: 0.7,
       color: whiteColor,
       textDecoration: "none",
-      transition: "color 0.3s ease-in-out",
+      transition: "color 0.3s ease-in-out", // Анимация при наведении
       padding: "8px",
     },
   },

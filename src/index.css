@@ -1,8 +1,9 @@
 :root {
-  --main-color: #f0e6ef;
-  --accent-color: #8f3f7b;
-  --secondary-color: #d0b1d7;
-  --main-text-color: #333;
+  --main-color: #f8f5fa;
+  --accent-color: #82628a;
+  --secondary-color: #a984aa;
+  --main-text-color: #2d2d2d;
+  --secondary-text-color: #82628a;
   --white-color: #fff;
 }
 body {
@@ -21,10 +22,9 @@ code {
     monospace;
 }
 
-.link:hover {
-  color: var(--main-text-color);
-  /* background: linear-gradient(#fff 90%, #F8F5FA 100%); */
-}
+/* .link:hover {
+  color: var(--secondary-text-color) !important;
+} */
 
 .BookList .BookCard:hover {
   all: revert;

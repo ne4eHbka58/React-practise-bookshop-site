@@ -5,7 +5,7 @@ import { useEffect, useRef, useCallback } from "react";
 
 const BookList = ({ books }) => {
   // Анимация
-  const bookCardRefs = useRef([]);
+  const bookCardRefs = useRef([]); // Массив ссылок для карточек книг
 
   const setBookCardRef = useCallback((el) => {
     if (el) {
@@ -33,7 +33,7 @@ const BookList = ({ books }) => {
           author={book.author}
           description={book.description}
           price={book.price}
-          ref={setBookCardRef} //ссылка
+          ref={setBookCardRef} // Ссылка
         />
       ))}
     </div>

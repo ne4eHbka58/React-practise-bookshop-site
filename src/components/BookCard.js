@@ -5,7 +5,7 @@ const imageContext = require.context(
   "../assets/images",
   false,
   /\.(png|jpg|jpeg|gif)$/
-); // Задача контекста для изображений
+); // Задачёт контекст для изображений, чтобы их можно было получить только по названию
 
 const BookCard = forwardRef(
   ({ image, title, author, description, price }, ref) => {
