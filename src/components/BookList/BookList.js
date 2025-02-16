@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./styles";
-import BookCard from "./BookCard";
+import styles from "./BookList.module.css";
+import BookCard from "../BookCard/BookCard";
 import { useEffect, useRef, useCallback } from "react";
 
 const BookList = ({ books }) => {
@@ -17,14 +17,14 @@ const BookList = ({ books }) => {
     bookCardRefs.current.forEach((card, index) => {
       setTimeout(function () {
         if (card) {
-          card.classList.add("show");
+          card.classList.add(styles.show);
         }
       }, (index + 1) * 200);
     }); // Перебирает все элементы массива и добавляет класс show каждые 200мс
   }, []);
 
   return (
-    <div className="BookList" style={styles.bookList}>
+    <div className={styles.bookList}>
       {books.map((book) => (
         <BookCard
           key={book.id}

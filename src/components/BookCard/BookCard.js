@@ -1,8 +1,8 @@
 import React, { forwardRef } from "react";
-import styles from "./styles";
+import styles from "./BookCard.module.css";
 
 const imageContext = require.context(
-  "../assets/images",
+  "../../assets/images",
   false,
   /\.(png|jpg|jpeg|gif)$/
 ); // Задачёт контекст для изображений, чтобы их можно было получить только по названию
@@ -10,18 +10,18 @@ const imageContext = require.context(
 const BookCard = forwardRef(
   ({ image, title, author, description, price }, ref) => {
     return (
-      <div className="BookCard" style={styles.bookCard} ref={ref}>
+      <div className={styles.bookCard} ref={ref}>
         <img
           src={imageContext(`./${image}`)}
           alt="изображение книги"
-          style={styles.bookCard.image}
+          className={styles.image}
         />
-        <div style={styles.bookCard.cardText}>
-          <h4 style={styles.bookCard.text}>
-            <span style={styles.bookCard.biggerText}>{title}</span> <br />
+        <div className={styles.cardText}>
+          <h4 className={styles.text}>
+            <span className={styles.biggerText}>{title}</span> <br />
             <i>{author}</i>
           </h4>
-          <p style={styles.bookCard.price}>{price} р.</p>
+          <p className={styles.price}>{price} р.</p>
         </div>
       </div>
     );

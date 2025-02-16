@@ -1,0 +1,17 @@
+.bookList {
+  margin-inline: auto; /* Расположение по середине */
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    minmax(300px, 1fr)
+  ); /* Создаёт 4 колонки с размером от 300px до 1fr */
+  width: 1600px;
+  justify-content: space-between;
+  grid-auto-rows: min-content; /* Создает ряды высотой с контент */
+  row-gap: 30px;
+  justify-items: center; /* Предотвращает растяжение дочерних элементов */
+}
+.show {
+  opacity: 1 !important; /* Показываем элементы */
+  transform: translateY(0) !important; /* Возвращаем в исходное положение */
+}
