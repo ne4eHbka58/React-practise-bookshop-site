@@ -24,6 +24,7 @@
 }
 
 .fullBookCard {
+  box-sizing: border-box;
   position: absolute;
   background-color: white;
   padding: 20px;
@@ -35,7 +36,7 @@
   background: linear-gradient(
     135deg,
     rgb(255, 255, 255) 0%,
-    rgb(226, 226, 226) 100%
+    rgb(245, 244, 244) 100%
   ); /* Лёгкий градиент на фон карточки */
   color: var(--accent-color);
   padding: 20px;
@@ -68,17 +69,73 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.2s;
+}
+
+.closeBtn:hover {
+  background-color: var(--hover-opacity-color);
 }
 
 .row {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 30px;
+}
+
+.imageBlock {
+  display: flex;
+  align-self: center;
 }
 
 .image {
-  height: 800px;
+  height: 810px;
 }
 
-/* .h {
-} */
+.bookName {
+  color: var(--accent-text-color);
+}
+
+.h {
+  color: var(--secondary-text-color);
+  margin-block: 12px;
+}
+
+.opacityText {
+  opacity: 0.8;
+}
+
+.text {
+  color: var(--secondary-text-color);
+  font-size: 18px;
+}
+
+.buy {
+  position: absolute;
+  bottom: 1%;
+  right: 3%;
+  font-size: 24px;
+  color: var(--secondary-text-color);
+}
+
+.purchaseBtn {
+  margin: 10px 20px 10px 30px;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 1px solid var(--accent-text-color);
+  color: var(--accent-text-color);
+  cursor: pointer;
+  font-size: 20px;
+  transition: box-shadow 0.5s ease-out, transform 0.2s ease-out; /* Анимация */
+}
+
+.purchaseBtn:hover {
+  box-shadow: 6px 6px 10px rgba(104, 79, 110, 0.2);
+}
+
+.purchaseBtn:active {
+  transform: translateY(3px) translateX(3px);
+  box-shadow: none;
+}

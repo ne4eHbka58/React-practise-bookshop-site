@@ -18,3 +18,17 @@
   transition: color 0.3s ease-in-out; /* Анимация при наведении */
   padding: 8px;
 }
+
+.link {
+  padding: 8px;
+  border-radius: 12px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.link:hover {
+  background-color: var(--hover-opacity-color);
+}
+
+.link:active {
+  background-color: var(--active-opacity-color);
+}

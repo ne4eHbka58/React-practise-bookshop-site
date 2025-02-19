@@ -1,8 +1,16 @@
 :root {
   --main-color: #f8f5fa;
   --accent-color: #82628a;
+  --hover-opacity-color: #b88ac44f;
+  --active-opacity-color: #9b75a373;
   --secondary-color: #a984aa;
   --main-text-color: #2d2d2d;
-  --secondary-text-color: #82628a;
+  --secondary-text-color: #734b7d;
+  --accent-text-color: #9449a7;
   --white-color: #fff;
 }
+
+::selection {
+  background: var(--secondary-text-color);
+  color: var(--white-color);
+} /* Изменение выделения */

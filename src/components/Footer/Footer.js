@@ -6,7 +6,10 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <h4>
-        <a href="https://github.com/ne4eHbka58" className={styles.h}>
+        <a
+          href="https://github.com/ne4eHbka58"
+          className={`${styles.h} ${styles.link}`}
+        >
           Мой GitHub
         </a>
       </h4>

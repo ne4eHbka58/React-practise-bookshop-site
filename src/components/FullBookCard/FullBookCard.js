@@ -30,27 +30,24 @@ const FullBookCard = ({ id, onClose }) => {
           ×
         </button>
         <div className={styles.row}>
-          <div>
+          <div className={styles.imageBlock}>
             <img
               src={imageContext(`./${book.image}`)}
               className={styles.image}
             />
           </div>
           <div>
-            <p>
-              <h1>{book.title}</h1>
-            </p>
-            <p>
-              <h3>
-                <span>Автор</span> {book.author}
-              </h3>
-            </p>
-            <p>
-              <h3>О книге</h3>
-            </p>
-            <p>{book.description}</p>
-            <h4>{book.price}</h4>
-            <button>Купить</button>
+            <h1 className={styles.bookName}>{book.title}</h1>
+            <h3 className={styles.h}>
+              <span className={styles.opacityText}>Автор</span> {book.author}
+            </h3>
+            <h3 className={styles.h}>О книге</h3>
+            <p className={styles.text}>{book.description}</p>
+            <h3 className={styles.buy}>
+              <span className={styles.opacityText}>Цена: </span>
+              {book.price} р{" "}
+              <button className={styles.purchaseBtn}>Купить</button>
+            </h3>
           </div>
         </div>
       </div>

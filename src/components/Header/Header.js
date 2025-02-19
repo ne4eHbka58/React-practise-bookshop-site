@@ -1,17 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 
 const Header = () => (
   <div className={styles.header}>
     <h1>
-      <a href="#" className={`${styles.a} ${styles.h1}`}>
+      <Link to="/" className={`${styles.link} ${styles.h1}`}>
         Lilac Scroll
-      </a>
+      </Link>
     </h1>
     <h2>
-      <a href="#" className={styles.a}>
+      <Link to="/" className={styles.link}>
         Корзина
-      </a>
+      </Link>
     </h2>
   </div>
 );
