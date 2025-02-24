@@ -112,22 +112,29 @@
 
 .buy {
   position: absolute;
-  bottom: 1%;
-  right: 3%;
+  bottom: 2%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 24px;
   color: var(--secondary-text-color);
 }
 
-.purchaseBtn {
-  margin: 10px 20px 10px 30px;
-  width: 150px;
-  height: 50px;
+.buyBtn {
+  margin-left: 20px;
+  width: 160px;
+  height: 60px;
   border-radius: 5px;
   background-color: transparent;
   border: 1px solid var(--accent-text-color);
   color: var(--accent-text-color);
+  font-size: 18px;
+}
+
+.purchaseBtn {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 18px;
   transition: box-shadow 0.5s ease-out, transform 0.2s ease-out; /* Анимация */
 }
 
