@@ -1,11 +1,6 @@
 import React, { forwardRef } from "react";
 import styles from "./BookCard.module.css";
 import { imageContext } from "../../utils/bookUtils";
-// const imageContext = require.context(
-//   "../../assets/images",
-//   false,
-//   /\.(png|jpg|jpeg|gif)$/
-// ); // Задаёт контекст для изображений, чтобы их можно было получить только по названию
 
 const BookCard = forwardRef(
   ({ image, title, author, description, price, onClick }, ref) => {

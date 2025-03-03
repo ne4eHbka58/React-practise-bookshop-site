@@ -19,19 +19,21 @@ const BookList = ({ books }) => {
   const bookCardRefs = useRef([]); // Массив ссылок для карточек книг. Нужен для анимации
 
   const setBookCardRef = useCallback((el) => {
+    // Добавляет элемент в массив
     if (el) {
       bookCardRefs.current.push(el);
     }
-  }, []); // Добавляет элемент в массив
+  }, []);
 
   useEffect(() => {
+    // Перебирает все элементы массива и добавляет класс show каждые 200мс
     bookCardRefs.current.forEach((card, index) => {
       setTimeout(function () {
         if (card) {
           card.classList.add(styles.show);
         }
       }, (index + 1) * 200);
-    }); // Перебирает все элементы массива и добавляет класс show каждые 200мс
+    });
   }, []);
 
   return (

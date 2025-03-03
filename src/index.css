@@ -13,11 +13,22 @@ code {
     monospace;
 }
 
-/* .link:hover {
-  color: var(--secondary-text-color) !important;
-} */
+.app {
+  display: flex;
+  flex-direction: column; /* Размещение элементов в столбец */
+  min-height: 100vh; /* Минимальная высота, занимающая всю высоту viewport */
+}
 
-/* .BookList .BookCard:hover {
-  all: revert;
-  box-shadow: 4px 6px 10px 5px rgba(104, 79, 110, 0.2) !important;
-} */
+main {
+  flex-grow: 1; /*  Заставляет main занимать все оставшееся пространство */
+  /* Стили для main */
+}
+
+.thanks {
+  font-size: 40px;
+  color: var(--main-text-color);
+  margin-block: 35vh;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
+  text-align: center;
+  text-decoration: none;
+}

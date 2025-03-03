@@ -30,8 +30,6 @@
   text-decoration: none;
   font-family: Segoe Print, cursive;
   color: var(--white-color);
-  text-decoration: none;
-  /* transition: "text-shadow 0.3s ease-in-out"; Анимация при наведении */
   padding: 8px;
   border-radius: 12px;
   transition: background-color 0.2s ease-in-out;

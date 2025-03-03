@@ -10,7 +10,7 @@ const Header = () => (
       </Link>
     </h1>
     <h2>
-      <Link to="/" className={styles.link}>
+      <Link to="/cart" className={styles.link}>
         Корзина
       </Link>
     </h2>

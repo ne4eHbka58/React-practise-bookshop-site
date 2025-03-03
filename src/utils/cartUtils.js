@@ -1,8 +1,8 @@
 // Функция для получения корзины из localStorage
 const getCartFromLocalStorage = () => {
   try {
-    const cartString = localStorage.getItem("cart");
-    return cartString ? JSON.parse(cartString) : { items: [] };
+    const cartString = localStorage.getItem("cart"); // Получаем корзину из localStorage
+    return cartString ? JSON.parse(cartString) : { items: [] }; // Если она не пуста, то преобразуем JSON в массив объектов, иначе возвращаем пустой массив
   } catch (error) {
     console.error("Ошибка при получении данных из localStorage:", error);
     return { items: [] };
@@ -43,8 +43,8 @@ const removeFromCart = (bookId, quantity = 1) => {
   const cart = getCartFromLocalStorage();
   const itemIndex = cart.items.findIndex((item) => item.bookId === bookId);
   if (itemIndex > -1) {
-    const updatedItems = [...cart]; // Копия массива cart
-    if (updatedItems[itemIndex].quantity >= quantity) {
+    const updatedItems = [...cart.items]; // Копия массива cart.items
+    if (updatedItems[itemIndex].quantity > quantity) {
       // Уменьшаем количество товара, если quantity меньше, чем доступно
       updatedItems[itemIndex] = {
         ...updatedItems[itemIndex],
@@ -54,8 +54,8 @@ const removeFromCart = (bookId, quantity = 1) => {
       // Удаляем товар из корзины, если quantity больше или равно, чем доступно
       updatedItems.splice(itemIndex, 1);
     }
-    const updatedCart = { ...cart, items: updatedItems }; //  Создаем новый объект cart
-    saveCartToLocalStorage(updatedCart);
+    cart.items = updatedItems; //  Обновляем cart.items
+    saveCartToLocalStorage(cart);
   } else {
     console.log("Книга не найдена в корзине");
   }

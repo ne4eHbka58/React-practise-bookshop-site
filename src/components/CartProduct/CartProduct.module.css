@@ -1,0 +1,68 @@
+.cartProduct {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 1200px;
+  height: 200px;
+  border: 1px solid var(--accent-color);
+  border-radius: 12px;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out,
+    box-shadow 0.3s ease-in-out; /* Анимация */
+  color: var(--secondary-text-color);
+}
+
+.image {
+  height: 180px;
+  width: 120px;
+}
+
+.bookInfo {
+  margin-block: 8px;
+}
+
+.bookName {
+  color: var(--accent-text-color);
+  font-size: 24px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  margin-top: 90px;
+  margin-left: 10px;
+}
+
+.price {
+  position: absolute;
+  right: 5%;
+  font-size: 20px;
+}
+
+.button {
+  border: 1px solid var(--accent-color);
+  padding: 6px 14px;
+  background: none;
+  color: var(--accent-color);
+}
+
+.leftButton {
+  border-radius: 5px 0 0 5px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.rightButton {
+  border-radius: 0 5px 5px 0;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.rightButton:hover,
+.leftButton:hover {
+  background-color: var(--hover-opacity-color);
+}
