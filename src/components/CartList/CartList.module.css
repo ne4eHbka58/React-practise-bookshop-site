@@ -2,6 +2,7 @@
   color: var(--main-text-color);
   margin-left: -1200px;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
+  margin-block: 0px;
 }
 
 .cartList {
